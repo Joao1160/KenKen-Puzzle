@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KenKen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>KenKen</h1>
+    <input type="number" placeholder="Pop-Size" id="popSize">
+    <input type="number" placeholder="Max-Generation" id="maxGeneration">
+    <label for="sizeSelect"></label>
+    <select id="sizeSelect">
+      <option hidden selected>Size</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+    </select>
+    <input type="button" onclick="runPython()" value="Create" />
+    <input type="button" onclick="solve()" value="Solve" />
+    <input type="button" onclick="hide()" value="Hide" />
+
+
+    <hr />
+    <div id="container"></div>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="js/Genetic.js"></script>
+  </body>
+</html>
